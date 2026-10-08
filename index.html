@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager - JavaScript Logic & State Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="todo-app">
+    <header class="app-header">
+      <h1>Task Manager</h1>
+      <p>State-driven To-Do application with local storage persistence.</p>
+
+    </header>
+
+    <!-- Create (Task Input Form) -->
+    <form id="todo-form" class="todo-form">
+      <input 
+        type="text" 
+        id="todo-input" 
+        placeholder="Add a new task..." 
+        autocomplete="off"
+        required 
+      />
+      <button type="submit" class="btn btn-add">Add Task</button>
+    </form>
+
+    <!-- Filter Buttons -->
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <!-- Read & Update/Delete Target List -->
+    <ul id="todo-list" class="todo-list">
+      <!-- Dynamic task items populated via JavaScript -->
+    </ul>
+
+    <!-- Task Summary & Clear Actions -->
+    <footer class="app-footer">
+      <span id="task-count">0 items left</span>
+      <button id="clear-completed" class="btn-clear">Clear Completed</button>
+    </footer>
+  </div>
+
+  <!-- External Script -->
+  <script src="script.js"></script>
+</body>
+</html>
